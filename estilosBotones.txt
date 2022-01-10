@@ -21,11 +21,13 @@
 /* ESTILOS GENERALES DE CADA BOTÓN */
 
 .button{
+    --coloruno: #341F97; /* Puedes cambiar el color de las variables a tu gusto */
+    --colordos: #FFF;
     height: 60px;
     width: 350px;                           
     position: relative;
-    background-color: #FFF;
-    border: solid 3px #341F97;
+    background-color: var(--colordos);
+    border: solid 3px var(--coloruno);
     border-radius: 10px;
     overflow: hidden;
 }
