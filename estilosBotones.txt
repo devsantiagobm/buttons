@@ -1,0 +1,344 @@
+----HTML---
+
+    <button class="button button-1"></button>
+    <button class="button button-2"></button>
+    <button class="button button-3"></button>
+    <button class="button button-4"></button>
+    <button class="button button-5"></button>
+    <button class="button button-6"></button>
+    <button class="button button-7"></button>
+    <button class="button button-8"></button>
+    <button class="button button-9"></button>
+    <button class="button button-10"></button>
+    <button class="button button-11"></button>
+    <button class="button button-12"></button>
+    <button class="button button-13"></button>
+    <button class="button button-14"></button>
+    <button class="button button-15"></button>
+
+----CSS----
+
+/* ESTILOS GENERALES DE CADA BOTÓN */
+
+.button{
+    height: 60px;
+    width: 350px;                           
+    position: relative;
+    background-color: #FFF;
+    border: solid 3px #341F97;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* ANIMACIÓN DE CADA BOTÓN */
+
+/* BOTÓN 1 */
+
+.button-1::before,
+.button-1::after{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+}
+
+.button-1::after{
+    transform: translateX(100%);
+    transition-property: transform;
+    transition-duration: .8s;
+    transition-timing-function: ease;
+}
+
+.button-1:before{
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: .8s;
+    transition-timing-function: ease;
+}
+
+.button-1:hover::after,
+.button-1:hover::before{
+    transform: translateX(0);
+}
+
+/* BOTÓN 2 */
+
+.button-2::before{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+    top:-100%;
+    transition-property: top;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+
+.button-2:hover::before{
+    top: 0;
+}
+
+/* BOTÓN 3 */
+
+.button-3::before{
+    width: 100%;
+    height: 200%;
+    background-color: var(--coloruno);
+    top:100%;
+    border-radius: 100% 100% 0 0;
+    transition-property:top;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-3:hover:before{
+    top: -100%;
+}
+
+/* BOTÓN 4 */
+
+.button-4::before{
+    width: 120%;
+    height: 100%;
+    background-color: var(--coloruno);
+    left:-130%;
+    transform: skewX(45deg);
+    transition-property: left;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-4:hover::before{
+    left:-10%;
+}
+
+/* BOTÓN 5 */
+
+.button-5::before,
+.button-5::after{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+    
+}
+
+.button-5::before{
+    left:-110%;
+    transform: skewX(-45deg);
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.button-5::after{
+    left:110%;
+    transform: skewX(45deg);
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.button-5:hover::before,
+.button-5:hover::after{
+    left: 0;
+}
+
+/* BOTÓN 6*/
+
+.button-6::before,
+.button-6::after{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+}
+
+.button-6::before{
+    left:-110%;
+    border-radius: 0 50px 50px 0;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.button-6::after{
+    left:110%;
+    border-radius: 50px 0 0 50px;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.button-6:hover::before,
+.button-6:hover::after{
+    left: 0;
+}
+
+/* BOTÓN 7 */
+
+.button-7::before{
+    width: 100%;
+    height: 150%;
+    background-image:linear-gradient(to bottom, var(--coloruno), var(--colordos));
+    top:-150%;
+    transition-property: top;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-7:hover::before{
+    top:0%;
+}
+
+/* BOTÓN 8 */
+
+.button-8::before{
+    width: 120%;
+    height: 100%;
+    background-image:linear-gradient(to right, var(--coloruno), var(--colordos)100%);
+    left:-120%;
+    transition-property: left;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-8:hover::before{
+    left:0%;
+}
+
+/* BOTÓN 9*/
+
+.button-9::before{
+    width: 50%;
+    height: 100%;
+    left:-50%;
+    background-image: linear-gradient(to left, var(--coloruno) 10%, var(--colordos)120%);
+    transition-property: left;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-9::after{
+    width: 50%;
+    height: 100%;
+    left: 100%;
+    background-image: linear-gradient(to right, var(--coloruno) 10%, var(--colordos) 120%);
+    transition-property: left;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-9:hover::before{
+    left:0;
+}
+
+.button-9:hover:after{
+    left:50%
+}
+
+/* BOTÓN 10 */
+
+.button-10::before{
+    width: 200%;
+    height: 400%;
+    background-color: var(--coloruno);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1s ease; 
+}
+
+.button-10:hover::before{
+    transform: scale(1);
+}
+
+/* BOTÓN 11*/
+
+.button-11::before{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+    transform: scaleX(0);
+    transition: transform .5s ease; 
+}
+
+.button-11:hover::before{
+    transform: scale(1);
+}
+
+/* BOTÓN 12 */
+
+.button-12::before{
+    width: 100%;
+    height: 100%;
+    background-color: var(--coloruno);
+    transform: scaleY(0);
+    transition-property: transform;
+    transition-duration: .5s;
+    transition-timing-function: ease; 
+}
+
+.button-12:hover::before{
+    transform: scaleY(1);
+}
+
+/* BOTÓN 13*/
+
+.button-13::before{
+    width: 250%;
+    height: 750%;
+    background-color: var(--coloruno);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: scaleX(0);
+    transition-property: transform;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.button-13:hover::before{
+    transform: scaleX(1);
+}
+
+/* BOTÓN 14 */
+
+.button-14::before{
+    width: 250%;
+    height: 750%;
+    background-color: var(--coloruno);
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    transform: scaleX(0);
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.button-14:hover::before{
+    transform: scaleX(1);
+}
+
+/* BOTÓN 15 */
+
+.button-15::before{
+    width: 14.2%;
+    height: 200%;
+    background-color: #9400D3;
+    left:0;
+    bottom: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    box-shadow: 49px 0 0 #4B0082,
+    98px 0 0 #0000FF,
+    147px 0 0 #00FF00,
+    196PX 0 0 #FFFF00,
+    245px 0 0 #FF7000,
+    294px 0 0 1px #FF0000;
+}
+
+.button__titulo{
+    transition: opacity .3s ease;
+}
+.button-15:hover > .button__titulo{
+    opacity: 0;
+}
+.button-15:hover::before{
+    opacity: 1;
+}
